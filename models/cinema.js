@@ -10,10 +10,9 @@ Cinema.prototype.listOfFilms = function () {
 }
 
 Cinema.prototype.findFilmByTitle = function (searchedFilm) {
-  const foundFilm = this.films.find(function (film) {
-    if (film.title === searchedFilm) return film;
-  })
-  return foundFilm;
+ return this.films.find((film) => {
+    return film.title === searchedFilm;
+ })
 }
 
 Cinema.prototype.findFilmsByGenre = function (searchedGenre) {
